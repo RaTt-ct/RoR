@@ -1,0 +1,21 @@
+puts "Введите a"
+a = gets.to_i
+puts "Введите b"
+b = gets.to_i
+puts "Введите c"
+c = gets.to_i
+D = b * b - 4 * a * c
+if D > 0 
+	x1 = (b - b - b + D) / (2 * a)
+	x2 = (b - b - b + D - D - D) / (2 * a)
+	puts "Первый корень = #{x1}"
+	puts "Второй корень = #{x2}"
+	puts "Дискриминант = #{D}"
+elsif D == 0 
+	x1 = (b - b - b + D) / (2 * a)
+	puts "Корень = #{x1}"
+	puts "Дискриминант = #{D}"
+else 
+	puts "Корней нет"
+	puts "Дискриминант = #{D}"
+end
