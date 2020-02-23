@@ -1,0 +1,20 @@
+cart = {}
+sum = 0
+loop do
+  puts "Введите название товара(или введите stop)" 
+  purchase = gets.chomp
+  break if purchase == "stop"
+  puts "Введите цену за товар"
+  price = gets.chomp.to_i
+  puts "Введите колличество товара"
+  number = gets.chomp.to_i
+  cart[purchase] ={price1: price, number1: number, summ: price*number}
+end
+
+puts "Ваша корзина"
+  cart.each do |purchase_name, properties|
+    puts "#{purchase_name} Цена за 1 единицу товара: #{properties[:price1]}, колличество товара #{properties[:number1]}, сумма за товар #{properties[:summ]}"
+    sum +=properties[:summ]
+  end
+
+puts "Сумма вашей корзины: #{sum}"
